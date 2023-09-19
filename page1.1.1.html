@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Email OTP Password Reset</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+  }
+  .container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    width: 300px;
+  }
+  input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+  }
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <h2>Password Reset</h2>
+  <form id="resetForm">
+    <input type="email" placeholder="Email" id="resetEmail" required>
+    <button type="button" id="sendOTP">Send OTP</button>
+    <input type="text" placeholder="OTP" id="resetOTP" required>
+    <input type="password" placeholder="New Password" id="newPassword" required>
+    <button type="submit">Reset Password</button>
+  </form>
+</div>
+<script>
+  document.getElementById('sendOTP').addEventListener('click', function() {
+
+    alert('OTP sent to your email.');
+  });
+
+  document.getElementById('resetForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+  
+    alert('Password reset successful.');
+    this.reset();
+
+    window.location.href = "page1.1.html"; 
+  });
+</script>
+</body>
+</html>

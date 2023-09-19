@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>User Sign Up</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+  }
+  .container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    box-sizing: border-box;
+  }
+  .container h2 {
+    margin-top: 0; 
+  }
+  input, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+    box-sizing: border-box; 
+  }
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <h2>Sign Up</h2>
+  <form id="signupForm">
+    <input type="text" placeholder="Name" id="name" required>
+    <input type="email" placeholder="Email" id="email" required>
+    <input type="tel" placeholder="Phone Number" id="phone" required>
+    <input type="date" id="dob" required>
+    <select id="gender" required>
+      <option value="" disabled selected>Select Gender</option>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="other">Other</option>
+    </select>
+    <button type="button" id="sendOTP">Send OTP</button>
+    <input type="text" placeholder="OTP" id="signupOTP" required>
+ 
+    <a href="page1.1.html"><button type="submit">Sign Up</button></a>
+  </form>
+</div>
+<script>
+  document.getElementById('sendOTP').addEventListener('click', function() {
+ 
+    alert('OTP sent for verification.');
+  });
+
+  document.getElementById('signupForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    alert('Sign up successful.');
+    this.reset();
+    
+
+    window.location.href = "page1.1.html"; 
+  });
+</script>
+</body>
+</html>
